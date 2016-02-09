@@ -1,0 +1,19 @@
+{
+  "name": "PropertyManager.Web",
+  "homepage": "https://github.com/hfakhrulddin/18-Property-Management",
+  "authors": [
+    "Hussen Fakhrulddin <hf556482@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
