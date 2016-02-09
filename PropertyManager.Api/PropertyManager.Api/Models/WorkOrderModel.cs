@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyManager.Api.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,17 +16,9 @@ namespace PropertyManager.Api.Models
             public DateTime ClosedDate { get; set; }
             public Priorities Priorities { get; set; }
 
-        }
 
-        public enum Priorities
-        {
+        public AddressModel Address { get; set; }
 
-            Critical = 1,
-            Major = 2,
-            High = 3,
-            Medium = 4,
-            Low = 5,
-
-        }
+    }
        
 }

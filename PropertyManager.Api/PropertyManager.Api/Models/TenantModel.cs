@@ -14,5 +14,7 @@ namespace PropertyManager.Api.Models
         public string LastName { get; set; }
         public string Telephone { get; set; }
         public string EmailAddress { get; set; }
+
+        public AddressModel Address { get; set; }
     }
 }

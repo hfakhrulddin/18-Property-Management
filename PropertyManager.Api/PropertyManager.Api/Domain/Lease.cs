@@ -51,7 +51,7 @@ namespace PropertyManager.Api.Domain
             StartDate = model.StartDate;
             EndDate = model.EndDate;
             RentAmount = model.RentAmount;
-            RentFrequencies = (RentFrequencies)model.RentFrequencies;
+            RentFrequencies = model.RentFrequencies;
 
     }
 

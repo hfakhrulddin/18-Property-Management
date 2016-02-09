@@ -49,10 +49,7 @@ namespace PropertyManager.Api.Domain
             Description = model.Description;
             OpenedDate = model.OpenedDate;
             ClosedDate = model.ClosedDate;
-        Priorities = (Priorities)model.Priorities;
-
-
-
+        Priorities = model.Priorities;
     }
     }
 }
