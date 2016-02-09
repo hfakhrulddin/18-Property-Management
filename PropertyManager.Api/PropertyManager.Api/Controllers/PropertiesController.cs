@@ -10,6 +10,8 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using PropertyManager.Api.Domain;
 using PropertyManager.Api.Infrastructure;
+using PropertyManager.Api.Models;
+using AutoMapper;
 
 namespace PropertyManager.Api.Controllers
 {
@@ -18,13 +20,14 @@ namespace PropertyManager.Api.Controllers
         private PropertyManagerDataContext db = new PropertyManagerDataContext();
 
         // GET: api/Properties
-        public IQueryable<Property> GetProperties()
+        public IEnumerable<PropertyModel> GetProperties()
         {
-            return db.Properties;
+            return Mapper.Map<IEnumerable<PropertyModel>>(db.Properties);
+            //return db.Properties;
         }
 
         // GET: api/Properties/5
-        [ResponseType(typeof(Property))]
+        [ResponseType(typeof(PropertyModel))]
         public IHttpActionResult GetProperty(int id)
         {
             Property property = db.Properties.Find(id);
@@ -33,12 +36,27 @@ namespace PropertyManager.Api.Controllers
                 return NotFound();
             }
 
-            return Ok(property);
+            return Ok(Mapper.Map<PropertyModel>(property));
+        }
+
+        //GET: api/Properties/5/Leases
+        [Route("api/Properties/{PropertyId}/Leases")]
+        public IEnumerable<LeaseModel> GetLeasesforProperty(int propertyId)
+        {
+            var leases = db.Leases.Where(l => l.PropertyId == propertyId);
+            return Mapper.Map<IEnumerable<LeaseModel>>(leases);
+        }
+        ///
+        [Route("api/Properties/{PropertyId}/WorkOrders")]
+        public IEnumerable<WorkOrderModel> GetWorkOrdersforProperty(int propertyId)
+        {
+            var workOrders = db.WorkOrders.Where(wo => wo.PropertyId == propertyId);
+            return Mapper.Map<IEnumerable<WorkOrderModel>>(workOrders);
         }
 
         // PUT: api/Properties/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutProperty(int id, Property property)
+        public IHttpActionResult PutProperty(int id, PropertyModel property)
         {
             if (!ModelState.IsValid)
             {
@@ -49,8 +67,9 @@ namespace PropertyManager.Api.Controllers
             {
                 return BadRequest();
             }
-
-            db.Entry(property).State = EntityState.Modified;
+            var dbproperty = db.Properties.Find(id);
+            dbproperty.Update(property);
+            db.Entry(dbproperty).State = EntityState.Modified;
 
             try
             {
@@ -72,22 +91,26 @@ namespace PropertyManager.Api.Controllers
         }
 
         // POST: api/Properties
-        [ResponseType(typeof(Property))]
-        public IHttpActionResult PostProperty(Property property)
+        [ResponseType(typeof(PropertyModel))]
+        public IHttpActionResult PostProperty(PropertyModel property)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
-            db.Properties.Add(property);
+            ///////////////////////////////////////////
+            var dbproperty = new Property(property);
+            property.PropertyId = dbproperty.PropertyId;
+            db.Properties.Add(dbproperty);
+            /////////////////////////////////////////////
+            //db.Properties.Add(property);
             db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = property.PropertyId }, property);
         }
 
         // DELETE: api/Properties/5
-        [ResponseType(typeof(Property))]
+        [ResponseType(typeof(PropertyModel))]
         public IHttpActionResult DeleteProperty(int id)
         {
             Property property = db.Properties.Find(id);
@@ -99,7 +122,7 @@ namespace PropertyManager.Api.Controllers
             db.Properties.Remove(property);
             db.SaveChanges();
 
-            return Ok(property);
+            return Ok(Mapper.Map<PropertyModel>(property));
         }
 
         protected override void Dispose(bool disposing)

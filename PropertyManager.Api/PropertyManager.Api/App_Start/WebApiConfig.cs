@@ -47,10 +47,5 @@ namespace PropertyManager.Api
             Mapper.CreateMap<WorkOrder, WorkOrderModel>();
         
         }
-
-
-
-
-
     }
 }
