@@ -27,9 +27,10 @@
 
             <td>
                 <a class="btn btn-info" ng-href="#/workorder/detail/{{workorder.WorkOrderId}}">Edit</a>
-                <a class="btn btn-danger">Delete</a>
+                <a class="btn btn-danger" ng-click="deleteWorkorder(workorder)">Delete</a>
             </td>
-        </tr>
-
-    </tbody>
+        </tr>   
+    </tbody>  
 </table>
+
+<a class="btn btn-default pull-right" ng-href="#/workorder/add">Add</a>

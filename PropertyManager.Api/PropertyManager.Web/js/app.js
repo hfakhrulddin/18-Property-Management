@@ -23,6 +23,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
         .state('workorder', { url: '/workorder', abstract: true, template: '<ui-view/>' })
     .state('workorder.grid', { url: '/grid', templateUrl: '/templates/workorder/workorder.grid.html', controller: 'WorkorderGridController' })
     .state('workorder.detail', { url: '/detail/:id', templateUrl: '/templates/workorder/workorder.detail.html', controller: 'WorkorderDetailController' })
+    .state('workorder.add', { url: '/add', templateUrl: '/templates/workorder/workorder.add.html', controller: 'WorkorderDetailController' })
 
 
 

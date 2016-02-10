@@ -1,0 +1,32 @@
+﻿<form name="propertyDetailFrom">
+    <div class="form-group">
+        <label>Property Id</label>
+        <input type="text" class="form-control" ng-model="newWorkorder.PropertyId" placeholder="Add Property Id..."/>
+    </div>
+    <div class="form-group">
+        <label>Tenant Id</label>
+        <input type="text" class="form-control" ng-model="newWorkorder.TenantId" placeholder="Add Tenant Id..."/>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" ng-model="newWorkorder.Description" placeholder="Add Description..."/>
+    </div>
+    <div class="form-group">
+        <label>Opened Date</label>
+        <input type="text" class="form-control" ng-model="newWorkorder.OpenedDate" placeholder="Add OpenedDate..."/>
+    </div>
+    <div class="form-group">
+        <label>Closed Date</label>
+        <input type="text" class="form-control" ng-model="newWorkorder.ClosedDate" placeholder="Add ClosedDate..."/>
+    </div>
+    <div class="form-group">
+        <label>Priorities</label>
+        <input type="text" class="form-control" ng-model="newWorkorder.Priorities" placeholder="Add Priorities..."/>
+    </div>
+</form>
+
+<div class="well clearfix">
+    <button class="btn btn-success pull-right" ng-click="addWorkorder()">
+        Add New
+    </button>
+</div>

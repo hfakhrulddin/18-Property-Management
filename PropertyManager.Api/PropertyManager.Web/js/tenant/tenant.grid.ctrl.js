@@ -11,5 +11,10 @@
 
     activate();
 
+    $scope.deleteTenant = function (tenant) {
+        tenant.$remove(function (data) {
+            activate();
+        })
+    };
 
 });

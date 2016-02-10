@@ -1,32 +1,33 @@
 ﻿<table class="table table-striped table-responsive">
-<thead>
-    <tr>
-        <th>Property Name</th>
-        <th>Address 1</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Post Code</th>
-    <th>
+    <thead>
+        <tr>
+            <th>Property Name</th>
+            <th>Address 1</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Post Code</th>
+            <th>
 
-    </th>  
-    </tr>
+            </th>
+        </tr>
 
-</thead>
+    </thead>
 
-<tbody>
-    <tr ng-repeat="property in properties">
+    <tbody>
+        <tr ng-repeat="property in properties">
 
-        <td>{{property.PropertyName}}</td>
-        <td>{{property.Address.Address1}}</td>
-        <td>{{property.Address.City}}</td>
-        <td>{{property.Address.State}}</td>
-        <td>{{property.Address.PostCode}}</td>
+            <td>{{property.PropertyName}}</td>
+            <td>{{property.Address.Address1}}</td>
+            <td>{{property.Address.City}}</td>
+            <td>{{property.Address.State}}</td>
+            <td>{{property.Address.PostCode}}</td>
 
-        <td>
-            <a class="btn btn-info" ng-href="#/property/detail/{{property.PropertyId}}">Edit</a>
-            <a class="btn btn-danger">Delete</a>
-        </td>
-    </tr>
+            <td>
+                <a class="btn btn-info" ng-href="#/property/detail/{{property.PropertyId}}">Edit</a>
+                <a class="btn btn-danger" ng-click="deleteProperty(property)">Delete</a>
 
-</tbody>
+            </td>
+        </tr>
+
+    </tbody>
 </table>
