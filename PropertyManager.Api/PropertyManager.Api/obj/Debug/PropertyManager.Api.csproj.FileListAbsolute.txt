@@ -1,4 +1,3 @@
-C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\obj\Debug\PropertyManager.Api.csprojResolveAssemblyReference.cache
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\bin\roslyn\csc.exe
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll

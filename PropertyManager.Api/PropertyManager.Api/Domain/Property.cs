@@ -11,11 +11,11 @@ namespace PropertyManager.Api.Domain
 
         public Property()
         {
-
         }
 
         public Property(PropertyModel property)
         {
+            this.Address = new Address();
             this.Update(property);
         }
 
@@ -31,12 +31,13 @@ namespace PropertyManager.Api.Domain
 
 
         public virtual Address Address { get; set; }
-        
+
 
         public virtual ICollection<Lease> Leases { get; set; }
         public virtual ICollection<WorkOrder> WorkOrders { get; set; }
 
-        public void Update(PropertyModel model) {
+        public void Update(PropertyModel model)
+        {
 
             PropertyId = model.PropertyId;
             AddressId = model.AddressId;
@@ -45,6 +46,8 @@ namespace PropertyManager.Api.Domain
             NumberOfBedrooms = model.NumberOfBedrooms;
             NumberOfBathrooms = model.NumberOfBathrooms;
             NumberOfVehicales = model.NumberOfVehicales;
-    }
+
+            Address.Update(model.Address);
+        }
     }
 }

@@ -1,0 +1,37 @@
+﻿<form name="propertyDetailFrom">
+    <div class="form-group">
+        <label>Property Name</label>
+        <input type="text" class="form-control" ng-model="newProperty.PropertyName" />
+    </div>
+    <div class="form-group">
+        <label>Address 1</label>
+        <input type="text" class="form-control" ng-model="newProperty.Address.Address1" />
+    </div>
+    <!--<div class="form-group">
+        <label>Address Id</label>
+        <input type="text" class="form-control" ng-model="newProperty.AddressId" />
+    </div>-->
+    <!--<div class="form-group">
+        <label>Square Feet</label>
+        <input type="text" class="form-control" ng-model="newProperty.SquareFeet" />
+    </div>
+    <div class="form-group">
+        <label>No. OfBedrooms</label>
+        <input type="text" class="form-control" ng-model="newProperty.NumberOfBedrooms" />
+    </div>
+    <div class="form-group">
+        <label>No. Of Bathrooms</label>
+        <input type="text" class="form-control" ng-model="newProperty.NumberOfBathrooms" />
+    </div>
+    <div class="form-group">
+        <label>No. Of Vehicales</label>
+        <input type="text" class="form-control" ng-model="newProperty.NumberOfVehicales" />
+    </div>-->
+</form>
+
+<div class="well clearfix">
+    <button class="btn btn-success pull-right" ng-click="addProperty()">
+        Add New
+    </button>
+</div>
+<pre>{{newProperty|json}}</pre>

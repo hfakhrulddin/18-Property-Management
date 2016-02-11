@@ -2,6 +2,7 @@
     <thead>
         <tr>
             <th>Property Name</th>
+            <th>Address ID</th>
             <th>Address 1</th>
             <th>City</th>
             <th>State</th>
@@ -17,6 +18,7 @@
         <tr ng-repeat="property in properties">
 
             <td>{{property.PropertyName}}</td>
+            <td>{{property.AddressId}}</td>
             <td>{{property.Address.Address1}}</td>
             <td>{{property.Address.City}}</td>
             <td>{{property.Address.State}}</td>
@@ -31,3 +33,4 @@
 
     </tbody>
 </table>
+<a class="btn btn-default pull-right" ng-href="#/property/add">Add</a>

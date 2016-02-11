@@ -1,6 +1,5 @@
 ﻿angular.module('app').controller('PropertyDetailController', function ($scope, $stateParams, PropertyResource) {
 
-
     //get the id from the URL
     $scope.property = PropertyResource.get({propertyId: $stateParams.id});
 
@@ -10,8 +9,5 @@
             alert('save successful');
         }); 
     };
-
-
-
 
 });

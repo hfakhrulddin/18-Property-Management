@@ -92,7 +92,7 @@ namespace PropertyManager.Api.Controllers
             }
             /////////////////////////////////////////////////
             var dbtenant = new Tenant(tenant);
-            tenant.TenantId = dbtenant.TenantId;
+            //tenant.TenantId = dbtenant.TenantId;
             db.Tenants.Add(dbtenant);
             ////////////////////////////////////////////////////////
     
