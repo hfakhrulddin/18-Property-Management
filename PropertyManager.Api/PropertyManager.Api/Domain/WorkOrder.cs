@@ -43,7 +43,7 @@ namespace PropertyManager.Api.Domain
 
         public void Update(WorkOrderModel model) {
 
-            //WorkOrderId = model.WorkOrderId;
+            WorkOrderId = model.WorkOrderId;
             PropertyId = model.PropertyId;
             TenantId = model.TenantId;
             Description = model.Description;

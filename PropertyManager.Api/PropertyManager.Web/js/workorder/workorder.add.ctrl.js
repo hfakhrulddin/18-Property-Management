@@ -1,14 +1,14 @@
 ﻿angular.module('app').controller('WorkorderAddController', function ($scope, $stateParams, WorkorderResource) {
     
     //get the id from the URL
-    $scope.workorder = {};
+    $scope.Workorder = {};
 
-    $scope.newWorkorder = {};
+    //$scope.newWorkorder = {};
 
-    $scope.addWorkorder = function () {
+    $scope.saveWorkorder = function () {
 
-        WorkorderResource.save($scope.newWorkorder, function () {
-            $scope.newWorkorder = {};
+        WorkorderResource.save($scope.workorder, function () {
+            $scope.workorder = {};
             alert('save list successful');
         });
     };

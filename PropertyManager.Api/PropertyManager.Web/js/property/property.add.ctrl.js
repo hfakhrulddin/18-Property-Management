@@ -1,13 +1,11 @@
 ﻿angular.module('app').controller('PropertyAddController', function ($scope, $stateParams, PropertyResource) {
-    
-    $scope.property = {};
 
-    $scope.newProperty = {};
+    $scope.Property = {};
 
-    $scope.addProperty = function () {
+    $scope.saveProperty = function () {
 
-        PropertyResource.save($scope.newProperty, function () {
-            $scope.newProperty = {};
+        PropertyResource.save($scope.property, function () {
+            $scope.property = {};
             alert('Create property successful');
 
 

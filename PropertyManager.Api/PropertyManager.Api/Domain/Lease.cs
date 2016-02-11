@@ -53,7 +53,8 @@ namespace PropertyManager.Api.Domain
             RentAmount = model.RentAmount;
             RentFrequencies = model.RentFrequencies;
 
-    }
+        
+        }
 
     }
 }
