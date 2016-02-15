@@ -2,6 +2,7 @@
 
 angular.module('app').value('apiUrl', 'http://localhost:50873/api');
 
+//angular.module('app').value('apiUrl', 'http://localhost:50000/api');
 angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('dashboard', { url: '/dashboard', templateUrl: '/templates/dashboard/dashboard.html', controller: 'DashboardController' })
@@ -26,6 +27,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     .state('workorder.grid', { url: '/grid', templateUrl: '/templates/workorder/workorder.grid.html', controller: 'WorkorderGridController' })
     .state('workorder.detail', { url: '/detail/:id', templateUrl: '/templates/workorder/workorder.detail.html', controller: 'WorkorderDetailController' })
     .state('workorder.add', { url: '/add', templateUrl: '/templates/workorder/workorder.detail.html', controller: 'WorkorderAddController' })
+    .state('workorder.date', { url: '/date', templateUrl: '/templates/workorder/workorder.date.html', controller: 'WorkorderDateController' })
 
 
 

@@ -39,6 +39,14 @@ namespace PropertyManager.Api.Controllers
             return Ok(Mapper.Map<WorkOrderModel>(workOrder));
         }
 
+        /// get the work orders for spcifice dates.
+        [Route("api/workorders/{startDate}/{endDate}")]
+        public IEnumerable<WorkOrderModel> Getrange(DateTime startDate, DateTime endDate)
+        {
+            var dateRange = db.WorkOrders.Where(wo => wo.OpenedDate >= startDate && wo.OpenedDate <= endDate);
+            return Mapper.Map<IEnumerable<WorkOrderModel>>(dateRange);
+        }
+
         // PUT: api/WorkOrders/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutWorkOrder(int id, WorkOrderModel workOrder)

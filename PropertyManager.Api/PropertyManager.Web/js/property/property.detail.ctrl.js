@@ -7,7 +7,7 @@
     $scope.saveProperty = function(){
         $scope.property.$update(function(){
             alert('save successful');
+
         }); 
     };
-
 });

@@ -1,15 +1,17 @@
 ﻿angular.module('app').controller('PropertyGridController', function ($scope, PropertyResource) {
 
-    function activate() {
-        $scope.properties = PropertyResource.query();
-    }
-
+    /////////////////////////////
     activate();
-
+    ///////////////////////////////Delete selected property form the list.
     $scope.deleteProperty = function (property) {
         property.$remove(function (data) {
             activate();
         })
     };
+    ////////////////////////////
+    function activate() {
+        $scope.properties = PropertyResource.query();
+    }
+
 
 });

@@ -37,3 +37,4 @@ C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\bin
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\bin\System.Web.Http.Cors.dll
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\bin\AutoMapper.xml
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\bin\System.Web.Http.Cors.xml
+C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\obj\Debug\PropertyManager.Api.csprojResolveAssemblyReference.cache
