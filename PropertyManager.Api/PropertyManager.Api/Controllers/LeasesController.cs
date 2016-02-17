@@ -15,6 +15,7 @@ using AutoMapper;
 
 namespace PropertyManager.Api.Controllers
 {
+    [Authorize]
     public class LeasesController : ApiController
     {
         private PropertyManagerDataContext db = new PropertyManagerDataContext();
@@ -99,6 +100,7 @@ namespace PropertyManager.Api.Controllers
         public IHttpActionResult DeleteLease(int id)
         {
             Lease lease = db.Leases.Find(id);
+            //Lease lease = db.Leases.FirstOrDefault(p => p.User.UserName == User.Identity.Name && p.PropertyId == id);
             if (lease == null)
             {
                 return NotFound();

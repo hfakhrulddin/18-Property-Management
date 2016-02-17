@@ -1,9 +1,10 @@
-﻿using PropertyManager.Api.Domain;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using PropertyManager.Api.Domain;
 using System.Data.Entity;
 
 namespace PropertyManager.Api.Infrastructure
 {
-    public class PropertyManagerDataContext:DbContext
+    public class PropertyManagerDataContext: IdentityDbContext<PropertyManagerUser> // We had chaged this from DbContext to IdentityDbContext<IdentityUser>
     {
 
         public PropertyManagerDataContext() : base("PropertyManager")// SQL table Name is the string here.
@@ -58,6 +59,25 @@ namespace PropertyManager.Api.Infrastructure
                .HasForeignKey(wo => wo.TenantId);
 
             //Work Orders has no many relatioships so we dont need to write the code.
+
+
+
+            modelBuilder.Entity<PropertyManagerUser>()  /// User has many properties.(OAuth)
+                .HasMany(u => u.Properties)
+                .WithRequired(p => p.User)
+                .HasForeignKey(p => p.UserId);
+
+
+            modelBuilder.Entity<PropertyManagerUser>()  /// User has many Tenants.(OAuth)
+                .HasMany(u => u.Tenants)
+                .WithRequired(t => t.User)
+                .HasForeignKey(t => t.UserId)
+            .WillCascadeOnDelete(false);
+
+
+            base.OnModelCreating(modelBuilder);//This will setup all the relationships for ASP NET Identity because it sends all the tables to the bast class above IdentityDbContext<IdentityUser>
+
+
 
         }
     }

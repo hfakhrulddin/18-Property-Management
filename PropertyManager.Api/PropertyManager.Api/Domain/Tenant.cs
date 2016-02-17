@@ -18,6 +18,10 @@ namespace PropertyManager.Api.Domain
 
         }
         public int TenantId { get; set; }
+
+        public string UserId { get; set; }// this related to Login User OAuth one to many relationship (one).
+        public virtual PropertyManagerUser User { get; set; }
+
         public int? AddressId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -7,45 +7,17 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Property Manager</title>
-
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-
-
 </head>
+
+
 
 <body style="background:url('71.jpg') fixed no-repeat; background-size:cover">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#/dashboard">Property Manager</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#/dashboard">Dashboard</a></li>
-                    <li><a href="#/property/grid">Properties</a></li>
-                    <li><a href="#/tenant/grid">Tenants</a></li>
-                    <li><a href="#/lease/grid">Leases</a></li>
-                    <li><a href="#/workorder/grid">WorkOrders</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div ui-view> </div>
 
-    <div class="container" style="margin-top: 60px;">
-        <div ui-view>
-
-        </div>
-    </div>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -53,35 +25,41 @@
 
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-     <script src="js/app.js"></script>
 
-    <script src="js/dashboard/dashboard.ctrl.js"></script>
+    <script src="js/app/app.ctrl.js"></script>
+    <script src="js/app.js"></script>
 
-    <script src="js/lease/lease.detail.ctrl.js"></script>
-    <script src="js/lease/lease.grid.ctrl.js"></script>
-    <script src="js/lease/lease.resource.js"></script>
-    <script src="js/lease/lease.add.ctrl.js"></script>
+    <script src="js/infrastructure/authentication.interceptor.js"></script>
+    <script src="js/infrastructure/authentication.service.js"></script>
 
 
-    <script src="js/property/property.detail.ctrl.js"></script>
-    <script src="js/property/property.grid.ctrl.js"></script>
-    <script src="js/property/property.resource.js"></script>
-    <script src="js/property/property.add.ctrl.js"></script>
+    <script src="js/app/dashboard/dashboard.ctrl.js"></script>
+
+    <script src="js/app/lease/lease.detail.ctrl.js"></script>
+    <script src="js/app/lease/lease.grid.ctrl.js"></script>
+    <script src="js/app/lease/lease.resource.js"></script>
+    <script src="js/app/lease/lease.add.ctrl.js"></script>
 
 
-    <script src="js/tenant/tenant.detail.ctrl.js"></script>
-    <script src="js/tenant/tenant.grid.ctrl.js"></script>
-    <script src="js/tenant/tenant.resource.js"></script>
-    <script src="js/tenant/tenant.add.ctrl.js"></script>
+    <script src="js/app/property/property.detail.ctrl.js"></script>
+    <script src="js/app/property/property.grid.ctrl.js"></script>
+    <script src="js/app/property/property.resource.js"></script>
+    <script src="js/app/property/property.add.ctrl.js"></script>
 
 
-    <script src="js/workorder/workorder.detail.ctrl.js"></script>
-    <script src="js/workorder/workorder.grid.ctrl.js"></script>
-    <script src="js/workorder/workorder.resource.js"></script>
-    <script src="js/workorder/workorder.add.ctrl.js"></script>
-    <script src="js/workorder/workorder.date.ctrl.js"></script>
+    <script src="js/app/tenant/tenant.detail.ctrl.js"></script>
+    <script src="js/app/tenant/tenant.grid.ctrl.js"></script>
+    <script src="js/app/tenant/tenant.resource.js"></script>
+    <script src="js/app/tenant/tenant.add.ctrl.js"></script>
+
+
+    <script src="js/app/workorder/workorder.detail.ctrl.js"></script>
+    <script src="js/app/workorder/workorder.grid.ctrl.js"></script>
+    <script src="js/app/workorder/workorder.resource.js"></script>
+    <script src="js/app/workorder/workorder.add.ctrl.js"></script>
+    <script src="js/app/workorder/workorder.date.ctrl.js"></script>
 
 </body>
 </html>

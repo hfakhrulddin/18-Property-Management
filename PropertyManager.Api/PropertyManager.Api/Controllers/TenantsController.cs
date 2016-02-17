@@ -15,6 +15,7 @@ using AutoMapper;
 
 namespace PropertyManager.Api.Controllers
 {
+    [Authorize]
     public class TenantsController : ApiController
     {
         private PropertyManagerDataContext db = new PropertyManagerDataContext();
@@ -22,7 +23,7 @@ namespace PropertyManager.Api.Controllers
         // GET: api/Tenants
         public IEnumerable<TenantModel> GetTenants()
         {
-            return Mapper.Map<IEnumerable<TenantModel>>(db.Tenants);
+            return Mapper.Map<IEnumerable<TenantModel>>(db.Tenants.Where(t => t.User.UserName == User.Identity.Name));
             //return db.Tenants;
         }
 
@@ -30,7 +31,8 @@ namespace PropertyManager.Api.Controllers
         [ResponseType(typeof(TenantModel))]
         public IHttpActionResult GetTenant(int id)
         {
-            Tenant tenant = db.Tenants.Find(id);
+            //Tenant tenant = db.Tenants.Find(id);
+            Tenant tenant = db.Tenants.FirstOrDefault(t => t.User.UserName == User.Identity.Name && t.TenantId == id);
             if (tenant == null)
             {
                 return NotFound();
@@ -59,7 +61,12 @@ namespace PropertyManager.Api.Controllers
             {
                 return BadRequest();
             }
-            var dbtenant = db.Tenants.Find(id);
+            //var dbtenant = db.Tenants.Find(id); // the code without OWIN
+            Tenant dbtenant = db.Tenants.FirstOrDefault(t => t.User.UserName == User.Identity.Name && t.TenantId == id);
+            if (dbtenant == null )
+            {
+                return BadRequest();
+            }
             dbtenant.Update(tenant);
             db.Entry(dbtenant).State = EntityState.Modified;
 
@@ -92,12 +99,11 @@ namespace PropertyManager.Api.Controllers
             }
             /////////////////////////////////////////////////
             var dbtenant = new Tenant(tenant);
-            //tenant.TenantId = dbtenant.TenantId;
+            dbtenant.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
             db.Tenants.Add(dbtenant);
-            ////////////////////////////////////////////////////////
-    
+            //////////////////////////////////////////////////////
             db.SaveChanges();
-
+            //tenant.TenantId = dbtenant.TenantId;
             return CreatedAtRoute("DefaultApi", new { id = tenant.TenantId }, tenant);
         }
 
@@ -105,7 +111,8 @@ namespace PropertyManager.Api.Controllers
         [ResponseType(typeof(TenantModel))]
         public IHttpActionResult DeleteTenant(int id)
         {
-            Tenant tenant = db.Tenants.Find(id);
+            //Tenant tenant = db.Tenants.Find(id);  without  Login
+            Tenant tenant = db.Tenants.FirstOrDefault(t => t.User.UserName == User.Identity.Name && t.TenantId == id);
             if (tenant == null)
             {
                 return NotFound();

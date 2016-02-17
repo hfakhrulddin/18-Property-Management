@@ -15,6 +15,7 @@ using AutoMapper;
 
 namespace PropertyManager.Api.Controllers
 {
+    [Authorize]
     public class AddressesController : ApiController
     {
         private PropertyManagerDataContext db = new PropertyManagerDataContext();
