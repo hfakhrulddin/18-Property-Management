@@ -7,7 +7,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
     $httpProvider.interceptors.push('AuthenticationInterceptor');
 
 
-
+    $urlRouterProvider.otherwise('home');
 
 
 

@@ -58,4 +58,3 @@ C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\bin
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\obj\Debug\PropertyManager.Api.Migrations.new12.resources
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\obj\Debug\PropertyManager.Api.csproj.GenerateResource.Cache
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\obj\Debug\PropertyManager.Api.Migrations.new13.resources
-C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api\obj\Debug\PropertyManager.Api.csprojResolveAssemblyReference.cache

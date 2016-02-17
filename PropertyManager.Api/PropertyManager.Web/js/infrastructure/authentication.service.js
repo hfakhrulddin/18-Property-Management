@@ -29,7 +29,8 @@
         var deferred = $q.defer();
 
 
-        return $http.post(apiUrl + '/token', data, { header: { 'content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {localStorageService.Set('token', { token: response.access_token });
+        return $http.post(apiUrl + '/token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
+            localStorageService.set('token', { token: response.access_token });
 
             state.authorized = true;
             deferred.resolve(response);
