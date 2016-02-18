@@ -21,14 +21,13 @@ namespace PropertyManager.Api
 
         public void Configuration(IAppBuilder app)
         {
-
             HttpConfiguration config = new HttpConfiguration();// create config to pass it to WebApiConfig.cs
             WebApiConfig.Register(config);/// send this to the API startup.
 
             ConfigureOAuth(app);//the method below (next).
 
-
             app.UseCors(CorsOptions.AllowAll); // app please use Owin.
+
             app.UseWebApi(config); // app (Owin) use our new config.
         }
 

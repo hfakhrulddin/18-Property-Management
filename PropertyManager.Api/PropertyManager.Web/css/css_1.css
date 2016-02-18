@@ -1,0 +1,46 @@
+﻿
+.home h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 4px 4px #000;
+  margin-top: 40px;
+  
+}
+
+.home2 {
+    text-align:start;
+    position:center;
+     width: 70%;
+     margin:auto; 
+}
+
+.home3 {
+
+     border-color:aqua;
+   
+}
+.home4 {
+    text-align:center;
+    position:center;
+     width: 50%;
+     margin:auto; 
+}
+.row {
+    position:relative;    
+}
+.test1 {
+    width:550px;
+    position:center;
+    margin-left:300px; 
+}
+.test2 {
+    width:500px;
+    position:center;
+    margin-left:325px; 
+}
+.test3 {
+    position:absolute !important;
+    top:20px;
+    margin-left:200px;
+}
+/*/*<add name="PropertyManager" connectionString="Server=WIN-7PBLFSNQRON;Initial Catalog=PropertyManager;Integrated Security=True;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />*/*/

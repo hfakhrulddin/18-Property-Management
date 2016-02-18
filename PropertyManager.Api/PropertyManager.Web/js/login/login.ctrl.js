@@ -7,7 +7,11 @@
 
     (
         function(response){location.replace('/#/app/dashboard')},
-        function(err){alert(err.error_description);}
+        function (err) {
+
+            location.replace('/#/app/login');
+            alert(err.error_description);
+        }
     );
     };
 });

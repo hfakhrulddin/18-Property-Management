@@ -47,6 +47,8 @@
     function logout() {
         localStorageService.remove('token');
         state.authorized = false;
+
+        return $q.resolve();
     }
     
     ///// this like encapsluation for OOP backend.

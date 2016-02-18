@@ -1,4 +1,4 @@
-﻿<table class="table  table-bordered table-responsive">
+﻿<table class="table  table-striped table-responsive">
     <thead>
         <tr>
             <th>Tenant Id </th>
@@ -26,7 +26,7 @@
             <td>{{lease.RentFrequencies}}</td>
 
             <td>
-                <a class="btn btn-info" ng-href="#/lease/detail/{{lease.LeaseId}}">Edit</a>
+                <a class="btn btn-info" ng-href="#/app/lease/detail/{{lease.LeaseId}}">Edit</a>
                 <a class="btn btn-danger" ng-click="deleteLease(lease)">Delete</a>
             
             </td>
@@ -34,4 +34,4 @@
 
     </tbody>
 </table>
-<a class="btn btn-default pull-right" ng-href="#/lease/add">Add</a>
+<a class="btn btn-default pull-right" ng-href="#/app/lease/add">Add</a>

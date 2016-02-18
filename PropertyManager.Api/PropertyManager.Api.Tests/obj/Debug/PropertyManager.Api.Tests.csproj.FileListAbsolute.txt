@@ -26,10 +26,7 @@ C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tes
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\obj\Debug\PropertyManager.Api.Tests.dll
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\obj\Debug\PropertyManager.Api.Tests.pdb
-C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\bin\Debug\System.Web.Http.Cors.dll
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\bin\Debug\AutoMapper.dll
-C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\bin\Debug\System.Web.Cors.dll
-C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\bin\Debug\System.Web.Http.Cors.xml
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\bin\Debug\AutoMapper.xml
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\bin\Debug\PropertyManager.Api.Tests.dll.config
 C:\Div\Origin\18-Property-Management\PropertyManager.Api\PropertyManager.Api.Tests\bin\Debug\Microsoft.Owin.dll

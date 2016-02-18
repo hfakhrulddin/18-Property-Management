@@ -3,13 +3,13 @@
     function interceptRequest(request) {
         var token = localStorageService.get('token');
         if (token) {
-            request.headers.Athorization = 'Bearer ' + token.token;
+            request.headers.Authorization = 'Bearer ' + token.token;
         }
         return request;
     }
 
     function interceptResponse(response) {
-        if (response.status == 401) {
+        if (response.status === 401) {
             location.replace('/#/login')
         }
         return $q.reject(response);
