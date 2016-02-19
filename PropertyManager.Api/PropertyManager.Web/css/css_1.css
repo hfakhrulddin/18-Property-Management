@@ -43,4 +43,22 @@
     top:20px;
     margin-left:200px;
 }
-/*/*<add name="PropertyManager" connectionString="Server=WIN-7PBLFSNQRON;Initial Catalog=PropertyManager;Integrated Security=True;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />*/*/
+
+
+/*//<add name="PropertyManager" connectionString="Server=tcp:propertymanager.database.windows.net,1433;Database=propertymanager;User ID=propertymanager@propertymanager;Password={PASSWORD};Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" providerName="System.Data.SqlClient" />*/
+ ///*<provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />*/
+/*// <add name="PropertyManager" connectionString="Server=WIN-7PBLFSNQRON;Initial Catalog=PropertyManager;Integrated Security=True;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />*/
+
+
+ /*<entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+  <connectionString>
+    <add name="PropertyManager" connectionString="Server=WIN-7PBLFSNQRON;Initial Catalog=PropertyManager;Integrated Security=True;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />
+  </connectionString>
+  </configuration>*/
+
+ /*<add name="PropertyManager" connectionString="Server=tcp:propertymanager.database.windows.net,1433;Database=propertymanager;User ID=propertymanager@propertymanager;Password={PASSWORD};Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" providerName="System.Data.SqlClient" />*/

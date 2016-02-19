@@ -1,15 +1,11 @@
 ﻿angular.module('app', ['ngResource', 'ui.router', 'LocalStorageModule']);/// LocalStorageService for OAuth 
 
-angular.module('app').value('apiUrl', 'http://localhost:50873/api');
+angular.module('app').value('apiUrl', 'http://localhost:50873//api');
 
-//angular.module('app').value('apiUrl', 'http://localhost:50000/api');
 angular.module('app').config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     $httpProvider.interceptors.push('AuthenticationInterceptor');
 
-
     $urlRouterProvider.otherwise('home');
-
-
 
     $stateProvider
 

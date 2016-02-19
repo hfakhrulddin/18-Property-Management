@@ -3,7 +3,7 @@ namespace PropertyManager.Api.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class new12 : DbMigration
+    public partial class new80 : DbMigration
     {
         public override void Up()
         {
@@ -21,11 +21,8 @@ namespace PropertyManager.Api.Migrations
                         State = c.String(),
                         PostCode = c.String(),
                         International = c.Boolean(nullable: false),
-                        PropertyManagerUser_Id = c.String(maxLength: 128),
                     })
-                .PrimaryKey(t => t.AddressId)
-                .ForeignKey("dbo.AspNetUsers", t => t.PropertyManagerUser_Id)
-                .Index(t => t.PropertyManagerUser_Id);
+                .PrimaryKey(t => t.AddressId);
             
             CreateTable(
                 "dbo.Properties",
@@ -57,15 +54,12 @@ namespace PropertyManager.Api.Migrations
                         EndDate = c.DateTime(),
                         RentAmount = c.Decimal(nullable: false, precision: 18, scale: 2),
                         RentFrequencies = c.Int(nullable: false),
-                        PropertyManagerUser_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.LeaseId)
                 .ForeignKey("dbo.Tenants", t => t.TenantId, cascadeDelete: true)
-                .ForeignKey("dbo.AspNetUsers", t => t.PropertyManagerUser_Id)
                 .ForeignKey("dbo.Properties", t => t.PropertyId, cascadeDelete: true)
                 .Index(t => t.TenantId)
-                .Index(t => t.PropertyId)
-                .Index(t => t.PropertyManagerUser_Id);
+                .Index(t => t.PropertyId);
             
             CreateTable(
                 "dbo.Tenants",
@@ -154,15 +148,12 @@ namespace PropertyManager.Api.Migrations
                         OpenedDate = c.DateTime(nullable: false),
                         ClosedDate = c.DateTime(nullable: false),
                         Priorities = c.Int(nullable: false),
-                        PropertyManagerUser_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.WorkOrderId)
-                .ForeignKey("dbo.AspNetUsers", t => t.PropertyManagerUser_Id)
                 .ForeignKey("dbo.Tenants", t => t.TenantId)
                 .ForeignKey("dbo.Properties", t => t.PropertyId, cascadeDelete: true)
                 .Index(t => t.PropertyId)
-                .Index(t => t.TenantId)
-                .Index(t => t.PropertyManagerUser_Id);
+                .Index(t => t.TenantId);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -184,17 +175,13 @@ namespace PropertyManager.Api.Migrations
             DropForeignKey("dbo.WorkOrders", "PropertyId", "dbo.Properties");
             DropForeignKey("dbo.Leases", "PropertyId", "dbo.Properties");
             DropForeignKey("dbo.WorkOrders", "TenantId", "dbo.Tenants");
-            DropForeignKey("dbo.WorkOrders", "PropertyManagerUser_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.Tenants", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Properties", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Leases", "PropertyManagerUser_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Addresses", "PropertyManagerUser_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.Leases", "TenantId", "dbo.Tenants");
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
-            DropIndex("dbo.WorkOrders", new[] { "PropertyManagerUser_Id" });
             DropIndex("dbo.WorkOrders", new[] { "TenantId" });
             DropIndex("dbo.WorkOrders", new[] { "PropertyId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
@@ -204,12 +191,10 @@ namespace PropertyManager.Api.Migrations
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.Tenants", new[] { "AddressId" });
             DropIndex("dbo.Tenants", new[] { "UserId" });
-            DropIndex("dbo.Leases", new[] { "PropertyManagerUser_Id" });
             DropIndex("dbo.Leases", new[] { "PropertyId" });
             DropIndex("dbo.Leases", new[] { "TenantId" });
             DropIndex("dbo.Properties", new[] { "AddressId" });
             DropIndex("dbo.Properties", new[] { "UserId" });
-            DropIndex("dbo.Addresses", new[] { "PropertyManagerUser_Id" });
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.WorkOrders");
             DropTable("dbo.AspNetUserRoles");

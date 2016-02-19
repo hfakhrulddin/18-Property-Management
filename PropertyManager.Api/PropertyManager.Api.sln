@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyManager.Api", "PropertyManager.Api\PropertyManager.Api.csproj", "{8ADE390B-5AD5-49B3-8849-B54B516C6B63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyManager.Api.Tests", "PropertyManager.Api.Tests\PropertyManager.Api.Tests.csproj", "{590251D8-B6A0-4233-8C8A-8B8FABDF777B}"
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PropertyManager.Web", "PropertyManager.Web\", "{AFCA6CA8-748F-4C34-8FAF-9D62821B2AE7}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
@@ -39,10 +37,6 @@ Global
 		{8ADE390B-5AD5-49B3-8849-B54B516C6B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADE390B-5AD5-49B3-8849-B54B516C6B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADE390B-5AD5-49B3-8849-B54B516C6B63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{590251D8-B6A0-4233-8C8A-8B8FABDF777B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{590251D8-B6A0-4233-8C8A-8B8FABDF777B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{590251D8-B6A0-4233-8C8A-8B8FABDF777B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{590251D8-B6A0-4233-8C8A-8B8FABDF777B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AFCA6CA8-748F-4C34-8FAF-9D62821B2AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AFCA6CA8-748F-4C34-8FAF-9D62821B2AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFCA6CA8-748F-4C34-8FAF-9D62821B2AE7}.Release|Any CPU.ActiveCfg = Debug|Any CPU

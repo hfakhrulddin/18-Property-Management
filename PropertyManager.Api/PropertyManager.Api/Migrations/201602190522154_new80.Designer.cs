@@ -7,13 +7,13 @@ namespace PropertyManager.Api.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class new12 : IMigrationMetadata
+    public sealed partial class new80 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(new12));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(new80));
         
         string IMigrationMetadata.Id
         {
-            get { return "201602160003033_new12"; }
+            get { return "201602190522154_new80"; }
         }
         
         string IMigrationMetadata.Source

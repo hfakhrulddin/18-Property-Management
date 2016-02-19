@@ -168,13 +168,9 @@
     <Compile Include="Infrastructure\AuthorizationRepository.cs" />
     <Compile Include="Infrastructure\PropertyManagerAuthorizationServerProvider.cs" />
     <Compile Include="Infrastructure\PropertyManagerDataContext.cs" />
-    <Compile Include="Migrations\201602160003033_new12.cs" />
-    <Compile Include="Migrations\201602160003033_new12.Designer.cs">
-      <DependentUpon>201602160003033_new12.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602160019487_new13.cs" />
-    <Compile Include="Migrations\201602160019487_new13.Designer.cs">
-      <DependentUpon>201602160019487_new13.cs</DependentUpon>
+    <Compile Include="Migrations\201602190522154_new80.cs" />
+    <Compile Include="Migrations\201602190522154_new80.Designer.cs">
+      <DependentUpon>201602190522154_new80.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AddressModel.cs" />
@@ -188,7 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\PropertyManagerApi20160217030029 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -200,11 +195,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602160003033_new12.resx">
-      <DependentUpon>201602160003033_new12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602160019487_new13.resx">
-      <DependentUpon>201602160019487_new13.cs</DependentUpon>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602190522154_new80.resx">
+      <DependentUpon>201602190522154_new80.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
