@@ -1,33 +1,39 @@
-﻿<table class="table table-striped table-responsive">
-    <thead>
-        <tr>
-            <th>Address Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Telephone Number</th>
-            <th>Email Address </th>
-            <th>
+﻿<div class="row  home">
+    <h1>Tenants</h1>
+</div>
+<hr>
+<div class="jumbotron" style="margin-top:45px">
+    <table class="table table-striped table-responsive">
+        <thead>
+            <tr>
+                <th class="home5">Address Id</th>
+                <th class="home5">First Name</th>
+                <th class="home5">Last Name</th>
+                <th class="home5">Telephone Number</th>
+                <th class="home5">Email Address </th>
+                <th>
 
-            </th>
-        </tr>
+                </th>
+            </tr>
 
-    </thead>
+        </thead>
 
-    <tbody>
-        <tr ng-repeat="tenant in tenants">
+        <tbody>
+            <tr ng-repeat="tenant in tenants">
 
-            <td>{{tenant.AddressId}}</td>
-            <td>{{tenant.FirstName}}</td>
-            <td>{{tenant.LastName}}</td>
-            <td>{{tenant.Telephone}}</td>
-            <td>{{tenant.EmailAddress }}</td>
+                <td>{{tenant.AddressId}}</td>
+                <td>{{tenant.FirstName}}</td>
+                <td>{{tenant.LastName}}</td>
+                <td>{{tenant.Telephone}}</td>
+                <td>{{tenant.EmailAddress }}</td>
 
-            <td>
-                <a class="btn btn-info" ng-href="#/app/tenant/detail/{{tenant.TenantId}}">Edit</a>
-                <a class="btn btn-danger" ng-click="deleteTenant(tenant)">Delete</a>
-            </td>
-        </tr>
+                <td>
+                    <a class="btn btn-default" ng-href="#/app/tenant/detail/{{tenant.TenantId}}">Edit</a>
+                    <a class="btn btn-danger" ng-click="deleteTenant(tenant)">Delete</a>
+                </td>
+            </tr>
 
-    </tbody>
-</table>
-<a class="btn btn-default pull-right" ng-href="#/app/tenant/add">Add</a>
+        </tbody>
+    </table>
+</div>
+    <a class="btn btn-default pull-right" ng-href="#/app/tenant/add">Add</a>

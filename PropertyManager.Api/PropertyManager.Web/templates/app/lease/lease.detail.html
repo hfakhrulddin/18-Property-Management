@@ -1,32 +1,39 @@
-﻿<form name="leaseDetailFrom">
-    <div class="form-group">
-        <label>Tenant Id</label>
-        <input type="text" class="form-control" ng-model="lease.TenantId" />
+﻿<div>
+    <br />
+    <br />
+
+
+    <form name="leaseDetailFrom">
+        <div class="form-group home2">
+            <label class="home5">Tenant Id</label>
+            <input type="text" class="form-control" ng-model="lease.TenantId" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">Property Id</label>
+            <input type="text" class="form-control" ng-model="lease.PropertyId" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">Start Date</label>
+            <input type="text" class="form-control" ng-model="lease.StartDate" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">End Date</label>
+            <input type="text" class="form-control" ng-model="lease.EndDate" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">Rent Amount</label>
+            <input type="text" class="form-control" ng-model="lease.RentAmount" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">Rent Frequencies</label>
+            <input type="text" class="form-control" ng-model="lease.RentFrequencies" />
+        </div>
+    </form>
     </div>
-    <div class="form-group">
-        <label>Property Id</label>
-        <input type="text" class="form-control" ng-model="lease.PropertyId" />
+<br/>
+    <div>
+        <button class="btn btn-default center-block" ng-click="saveLease()">
+            Save
+        </button>
     </div>
-    <div class="form-group">
-        <label>Start Date</label>
-        <input type="text" class="form-control" ng-model="lease.StartDate" />
-    </div>
-    <div class="form-group">
-        <label>End Date</label>
-        <input type="text" class="form-control" ng-model="lease.EndDate" />
-    </div>
-    <div class="form-group">
-        <label>Rent Amount</label>
-        <input type="text" class="form-control" ng-model="lease.RentAmount" />
-    </div>
-    <div class="form-group">
-        <label>Rent Frequencies</label>
-        <input type="text" class="form-control" ng-model="lease.RentFrequencies" />
-    </div>
-</form>
-<div class="well clearfix">
-    <button class="btn btn-success pull-right" ng-click="saveLease()">
-        Save
-    </button>
-</div>
 

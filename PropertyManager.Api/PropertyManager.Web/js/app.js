@@ -2,6 +2,8 @@
 
 angular.module('app').value('apiUrl', 'https://propertyapi.azurewebsites.net/api');
 
+//angular.module('app').value('apiUrl', 'http://localhost:50873/api');
+
 angular.module('app').config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     $httpProvider.interceptors.push('AuthenticationInterceptor');
 
@@ -10,7 +12,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
     $stateProvider
 
     .state('home', { url: '/home', templateUrl: '/templates/home/home.html', controller: 'HomeController' })
-    .state('app', { url: '/app', templateUrl: '/templates/app/app.html', controller: 'AppController' })
+    .state('app', { url: '/app', templateUrl: '/templates/app/app.html', controller: 'DashboardController' })
         .state('register', { url: '/register', templateUrl: '/templates/register/register.html', controller: 'RegisterController' })
         .state('login', { url: '/login', templateUrl: '/templates/login/login.html', controller: 'LoginController' })
 

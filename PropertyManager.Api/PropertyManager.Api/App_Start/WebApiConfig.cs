@@ -13,9 +13,9 @@ namespace PropertyManager.Api
     {
         public static void Register(HttpConfiguration config)
         {
-            //Enable others ports for any method any header any 
-            var rules = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(rules);
+            //////Enable others ports for any method any header any 
+            ////var rules = new EnableCorsAttribute("*", "*", "*");
+            ////config.EnableCors(rules);
 
 
             // Web API configuration and services

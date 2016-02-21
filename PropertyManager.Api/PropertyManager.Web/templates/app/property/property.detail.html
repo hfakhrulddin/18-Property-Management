@@ -1,36 +1,40 @@
-﻿<form name="propertyDetailFrom">
-    <div class="form-group">
-        <label>Property Name</label>
-        <input type="text" class="form-control" ng-model="property.PropertyName"/>
+﻿<div>
+    <br />
+    <br />
+<form name="propertyDetailFrom">
+    <div class="form-group home2">
+        <label class="home5">Property Name</label>
+        <input type="text" class="form-control input-lg text-center" ng-model="property.PropertyName"/>
     </div>
-    <div class="form-group">
-        <label>Address Id</label>
-        <input type="text" class="form-control" ng-model="property.AddressId" />
+    <div class="form-group home2">
+        <label class="home5">Address Id</label>
+        <input type="text" class="form-control input-lg text-center" ng-model="property.AddressId" />
     </div>
-    <div class="form-group">
-        <label>Address/Address1</label>
-        <input type="text" class="form-control" ng-model="property.Address.Address1" />
+    <div class="form-group home2">
+        <label class="home5">Address/Address1</label>
+        <input type="text" class="form-control input-lg text-center" ng-model="property.Address.Address1" />
     </div>
-    <div class="form-group">
-        <label>City</label>
-        <input type="text" class="form-control" ng-model="property.Address.City" />
+    <div class="form-group home2">
+        <label class="home5">City</label>
+        <input type="text" class="form-control input-lg text-center" ng-model="property.Address.City" />
     </div>
-    <div class="form-group">
-        <label>State</label>
-        <input type="text" class="form-control" ng-model="property.Address.State" />
+    <div class="form-group home2">
+        <label class="home5">State</label>
+        <input type="text" class="form-control input-lg text-center" ng-model="property.Address.State" />
     </div>
-    <div class="form-group">
-        <label>Post Code</label>
-        <input type="text" class="form-control" ng-model="property.Address.PostCode" />
+    <div class="form-group home2">
+        <label class="home5">Post Code</label>
+        <input type="text" class="form-control input-lg text-center" ng-model="property.Address.PostCode" />
     </div>
 </form>
+    <br />
+    </div>
+        <div>
+          
+            <button class="btn btn-default center-block" ng-click="saveProperty()">
+                Save
+            </button>
 
-<div class="well clearfix">
-    <button class="btn btn-success pull-right" ng-click="saveProperty()">
-Save
-    </button>
-</div>
-
-
+        </div>
 
 

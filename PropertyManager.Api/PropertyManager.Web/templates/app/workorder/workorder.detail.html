@@ -1,32 +1,37 @@
-﻿<form name="workorderDetailFrom">
-    <div class="form-group">
-        <label>Property Id</label>
-        <input type="text" class="form-control" ng-model="workorder.PropertyId" />
+﻿<div>
+    <br />
+    <br />
+    <form name="workorderDetailFrom">
+        <div class="form-group home2">
+            <label class="home5">Property Id</label>
+            <input type="text" class="form-control" ng-model="workorder.PropertyId" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">Tenant Id</label>
+            <input type="text" class="form-control" ng-model="workorder.TenantId" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">Description</label>
+            <input type="text" class="form-control" ng-model="workorder.Description" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">Opened Date</label>
+            <input type="text" class="form-control" ng-model="workorder.OpenedDate" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">Closed Date</label>
+            <input type="text" class="form-control" ng-model="workorder.ClosedDate" />
+        </div>
+        <div class="form-group home2">
+            <label class="home5">Priorities</label>
+            <input type="text" class="form-control" ng-model="workorder.Priorities" />
+        </div>
+    </form>
     </div>
-    <div class="form-group">
-        <label>Tenant Id</label>
-        <input type="text" class="form-control" ng-model="workorder.TenantId" />
+<br />
+<div>
+        <button class="btn btn-default center-block" ng-click="saveWorkorder()">
+            Save
+        </button>
     </div>
-    <div class="form-group">
-        <label>Description</label>
-        <input type="text" class="form-control" ng-model="workorder.Description" />
-    </div>
-    <div class="form-group">
-        <label>Opened Date</label>
-        <input type="text" class="form-control" ng-model="workorder.OpenedDate" />
-    </div>
-    <div class="form-group">
-        <label>Closed Date</label>
-        <input type="text" class="form-control" ng-model="workorder.ClosedDate" />
-    </div>
-    <div class="form-group">
-        <label>Priorities</label>
-        <input type="text" class="form-control" ng-model="workorder.Priorities" />
-    </div>
-</form>
-<div class="well clearfix">
-    <button class="btn btn-success pull-right" ng-click="saveWorkorder()">
-        Save
-    </button>
-</div>
-    
+

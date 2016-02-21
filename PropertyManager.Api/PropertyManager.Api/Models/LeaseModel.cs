@@ -20,6 +20,7 @@ namespace PropertyManager.Api.Models
 
 
         public AddressModel Address { get; set; }
+        public TenantModel Tenant { get; set; }
     }
 
 
