@@ -48,6 +48,7 @@ namespace PropertyManager.Api.Controllers
             var leases = db.Leases.Where(l => l.TenantId == tenantId);
             return Mapper.Map<IEnumerable<LeaseModel>>(leases);
         }
+
         // PUT: api/Tenants/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutTenant(int id, TenantModel tenant)
@@ -99,6 +100,7 @@ namespace PropertyManager.Api.Controllers
             }
             /////////////////////////////////////////////////
             var dbtenant = new Tenant(tenant);
+
             dbtenant.User = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
             db.Tenants.Add(dbtenant);
             //////////////////////////////////////////////////////

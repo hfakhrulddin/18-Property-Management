@@ -75,10 +75,7 @@ namespace PropertyManager.Api.Infrastructure
             .WillCascadeOnDelete(false);
 
 
-            base.OnModelCreating(modelBuilder);//This will setup all the relationships for ASP NET Identity because it sends all the tables to the bast class above IdentityDbContext<IdentityUser>
-
-
-
+            base.OnModelCreating(modelBuilder);         ///This will setup all the relationships for ASP NET Identity because it sends all the tables to the bast class above IdentityDbContext<IdentityUser>
         }
     }
 }

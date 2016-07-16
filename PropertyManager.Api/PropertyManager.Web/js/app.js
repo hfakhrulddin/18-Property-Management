@@ -1,8 +1,8 @@
 ﻿angular.module('app', ['ngResource', 'ui.router', 'LocalStorageModule']);/// LocalStorageService for OAuth 
 
-angular.module('app').value('apiUrl', 'https://propertyapi.azurewebsites.net/api');
+//angular.module('app').value('apiUrl', 'https://propertyapi.azurewebsites.net/api');
 
-//angular.module('app').value('apiUrl', 'http://localhost:50873/api');
+angular.module('app').value('apiUrl', 'http://localhost:50873/api');
 
 angular.module('app').config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     $httpProvider.interceptors.push('AuthenticationInterceptor');
@@ -28,7 +28,6 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
         .state('app.lease.grid', { url: '/grid', templateUrl: '/templates/app/lease/lease.grid.html', controller: 'LeaseGridController' })
         .state('app.lease.detail', { url: '/detail/:id', templateUrl: '/templates/app/lease/lease.detail.html', controller: 'LeaseDetailController' })
         .state('app.lease.add', { url: '/add', templateUrl: '/templates/app/lease/lease.detail.html', controller: 'LeaseAddController' })
-
 
     .state('app.tenant', { url: '/tenant', abstract: true, template: '<ui-view/>' })
         .state('app.tenant.grid', { url: '/grid', templateUrl: '/templates/app/tenant/tenant.grid.html', controller: 'TenantGridController' })

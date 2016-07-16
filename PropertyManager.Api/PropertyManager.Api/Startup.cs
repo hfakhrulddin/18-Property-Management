@@ -11,8 +11,6 @@ using System.Web.Http;
 
 [assembly:OwinStartup(typeof(PropertyManager.Api.Startup))] // Tell Owin to use this class Startup as a Startup class.//Adding behavier to the class.
 
-
-
 namespace PropertyManager.Api
 {
     public class Startup

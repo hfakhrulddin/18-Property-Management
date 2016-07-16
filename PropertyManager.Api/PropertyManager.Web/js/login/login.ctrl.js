@@ -2,7 +2,15 @@
 {
     $scope.loginData = {};
 
-    $scope.login = function () { AuthenticationService.login($scope.loginData).then
+
+
+
+
+
+    $scope.login = function () {
+
+        AuthenticationService.logout();
+        AuthenticationService.login($scope.loginData).then
 
 
     (
@@ -14,4 +22,8 @@
         }
     );
     };
+
+
+
+
 });

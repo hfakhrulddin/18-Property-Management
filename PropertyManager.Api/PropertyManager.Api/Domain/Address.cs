@@ -9,11 +9,11 @@ namespace PropertyManager.Api.Domain
     public class Address
     {
 
-
         public Address(AddressModel address)
         {
             this.Update(address);
         }
+
         public Address()
         {
 

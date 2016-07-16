@@ -17,7 +17,7 @@ namespace PropertyManager.Api.Controllers
      // 
      [AllowAnonymous]
      [Route("api/accounts/register")]
-        public async Task<IHttpActionResult> Register(RegistrationModel registeration)
+        public async Task<IHttpActionResult> Register(RegistrationModel registration)
         {
 
             // 1. Server side validation.
@@ -27,7 +27,7 @@ namespace PropertyManager.Api.Controllers
             }
 
             // 2. Pass the registration onto AuthRepository.
-            var result = await _repo.RegisterUser(registeration);
+            var result = await _repo.RegisterUser(registration);
 
             // 3. Check to see that registration was successful
             if (result.Succeeded)

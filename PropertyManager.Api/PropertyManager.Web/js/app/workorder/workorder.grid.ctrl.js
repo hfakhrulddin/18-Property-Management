@@ -17,4 +17,10 @@
     }
     //////////////////////////////////Call to update your table.
     activate();
+
+
+    $scope.picker() = function (){ 
+        $('.datepicker').datepicker();
+  
+    }
 });
