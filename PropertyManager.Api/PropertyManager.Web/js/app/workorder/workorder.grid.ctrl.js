@@ -19,7 +19,7 @@
     activate();
 
 
-    $scope.picker() = function (){ 
+    $scope.picker = function (){ 
         $('.datepicker').datepicker();
   
     }
