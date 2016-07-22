@@ -48,9 +48,5 @@ namespace PropertyManager.Api
 
 
         }
-
-
-
-
     }
 }
